@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Web - Examen Final UAI</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="menu-inicial" id="menu-inicial">
+        <h1 class="titulo-juego">SUDOKU</h1>
+        <div class="contenedor-formulario">
+            <label for="nombre-jugador" class="etiqueta-formulario">Nombre del Jugador:</label>
+            <input type="text" id="nombre-jugador" class="entrada-texto" placeholder="Mínimo 3 letras">
+            <button type="button" id="boton-jugar" class="boton-primario">Jugar</button>
+        </div>
+    </header>
+
+    <main class="contenedor-juego" id="contenedor-juego">
+        <section class="panel-control">
+            <div class="info-partida">
+                <p class="texto-info">Jugador: <span id="mostrar-nombre">-</span></p>
+                <p class="texto-info">Tiempo: <span id="temporizador">00:00</span></p>
+                <p class="texto-info">Puntaje: <span id="puntaje">0</span></p>
+            </div>
+            <button type="button" id="boton-reiniciar" class="boton-secundario">Reiniciar</button>
+        </section>
+
+        <section class="contenedor-tablero" id="tablero-sudoku">
+            </section>
+    </main>
+
+    <div class="modal oculto" id="modal-notificacion">
+        <div class="contenido-modal">
+            <h2 class="titulo-modal" id="modal-titulo">¡Partida Terminada!</h2>
+            <p class="texto-modal" id="modal-mensaje">Mensaje de victoria o derrota.</p>
+            <button type="button" id="boton-modal-cerrar" class="boton-primario">Aceptar</button>
+        </div>
+    </div>
+
+    <footer class="pie-pagina">
+        <a href="https://github.com/TU_USUARIO/TU_REPOSITORIO" class="enlace-github" target="_blank" rel="noopener noreferrer">Ver código en GitHub</a>
+    </footer>
+
+    <script src="js/ui.js"></script>
+    <script src="js/juego.js"></script>
+</body>
+</html>
